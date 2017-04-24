@@ -1,0 +1,154 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[]{fullpage}
+\usepackage{amsmath}
+\usepackage{float}
+\usepackage{tabu}
+\usepackage{graphicx}
+\usepackage{subfiles}
+\usepackage{blindtext}
+\usepackage{lipsum}
+\usepackage{color, colortbl}
+\usepackage{xcolor}
+\usepackage{tikz} 
+\usepackage{eso-pic}
+\usepackage{tabularx}
+\usepackage{placeins}
+\usepackage{soul}
+\usepackage{hyperref}
+
+\author{Aleksander Holthe  \\ Katrine Sundal Haune \\ Kent Kjeldaas \\ Stian Fredriksen \\ Tomas Lyngroth \\ Vanja Katinka Halvorsen}
+
+\makeatletter
+\let\vapiqteam\@author
+\let\thedate\@date
+
+\definecolor{cadetgrey}{rgb}{0.57, 0.64, 0.69}      % Dark Color
+\definecolor{gainsboro}{rgb}{0.86, 0.86, 0.86}      % Light Color
+
+% Turning off indentation
+\setlength{\parindent}{0pt}
+
+\begin{document}
+
+%% FRONT PAGE
+\begin{titlepage}
+    \centering
+    \pagecolor{gainsboro}
+    \begin{tikzpicture}[remember picture,overlay]
+    \node[anchor=north east,inner sep=7pt] at (current page.north east)
+        {\includegraphics[scale=0.4]{VAPIQ-PICTURES/LogoMerged3}};        
+    \end{tikzpicture}
+	\\[3.0 cm]
+    \begin{figure}[h]
+        \centering
+        \includegraphics[width = 0.35\textwidth]{VAPIQ-PICTURES//Logo2_Tilted.png}
+        \\[2.0 cm] 
+    \end{figure}                              
+    \textsc{\Huge Variable Pitch}  
+    \\[1 cm]
+    \textsc{\Large }   
+    \\[3.0 cm]
+	\large \vapiqteam      
+\end{titlepage}
+\pagecolor{white}
+
+
+%% DOCUMENT HISTORY TABLE
+%%% This table should be updated with all major changes
+%%%% OBS! When syncing with Github, remember to leave comment corresponding with version number from this table
+\begin{center}
+\section*{\textbf{Document History}}
+\begin{tabular}{cllll}
+\rowcolor{cadetgrey}
+\textbf{Version:}    &\textbf{Date:} 	 &\textbf{Comment:}    &\textbf{Done by:}   &\textbf{Approved by:}  \\
+
+0.0       & $24.04.17$   & Created .tex-file, standard front page,  & KSH  & KSH \\ 
+
+\end{tabular}                                                                   
+\end{center}
+
+\vspace*{3.0 cm}
+
+%% ACRONYMS
+\begin{center}
+\section*{\textbf{Acronyms}}
+\begin{tabular}{ll}
+\rowcolor{cadetgrey}
+    &   \\
+Aleksander Holthe      & AH     
+ \\\rowcolor{gainsboro}
+Katrine Sundal Haune  & KSH \\
+Kent Kjeldaas         & KK 
+ \\\rowcolor{gainsboro}
+Stian Fredriksen      & SF  \\
+Tomas Lyngroth       & TL   
+ \\\rowcolor{gainsboro}
+Vanja Katinka Halvorsen     & VKH   \\
+Variable Pitch Quadcopter   & VAPIQ
+\end{tabular}                                                             
+\end{center}
+
+\vspace*{1cm}
+
+%% ABRIVIATIONS
+\begin{center}
+\section*{\textbf{Abbreviations}}
+\begin{tabular}{ll}
+\rowcolor{cadetgrey}
+    &   \\
+Revolutions per minute      & RPM          \\ \rowcolor{gainsboro}
+Electronic Speed Controller & ESC \\ 
+Pulse Width Modulation  & PWM \\ \rowcolor{gainsboro}
+
+\end{tabular}                                                             
+\end{center}
+
+\newpage
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% ABSTRACT
+\subfile{Sections/Abstract}
+\newpage
+
+% LIST OF STUFF
+\tableofcontents
+\listoffigures
+\newpage
+
+%% SEE MAL-file
+
+% INTRODUCTION 
+\subfile{Sections/1Introduction}
+\newpage
+
+\subfile{Sections/2Characteristics}
+\newpage
+
+\subfile{Sections/3Simulation}
+\newpage
+
+\subfile{Sections/4Challenges}
+\newpage
+
+\subfile{Sections/5ImprovedLanding}
+\newpage
+
+\subfile{Sections/6Stability}
+\newpage
+
+\subfile{Sections/7Tests}
+\newpage
+
+\subfile{Sections/8Conclusion}
+\newpage
+
+\subfile{Sections/9Recommendations}
+\newpage
+
+% References
+\subfile{Sections/References}
+
+\end{document}
